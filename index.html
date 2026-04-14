@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmol Mahajan | Data Consultant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">AM<span class="accent">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge reveal">
+                <span class="pulse-dot"></span>
+                Available for opportunities
+            </div>
+            <h1 class="hero-title reveal">
+                <span class="line">Hi, I'm</span>
+                <span class="line name-line">
+                    <span class="name-text">Anmol Mahajan</span>
+                </span>
+            </h1>
+            <div class="hero-roles reveal-delay-1">
+                <span class="typing-text" id="typingText"></span><span class="cursor-blink">|</span>
+            </div>
+            <p class="hero-description reveal-delay-2">
+                Data Consultant turning complex data into actionable insights.
+                Experienced across energy, telecommunications, and education sectors.
+            </p>
+            <div class="hero-cta reveal-delay-3">
+                <a href="#contact" class="btn btn-primary">
+                    <span>Get In Touch</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#experience" class="btn btn-outline">
+                    <span>View My Work</span>
+                </a>
+            </div>
+            <div class="hero-stats reveal-delay-3">
+                <div class="stat">
+                    <span class="stat-number" data-target="5">0</span><span class="accent">+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="5">0</span><span class="accent">+</span>
+                    <span class="stat-label">Companies</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="3">0</span><span class="accent">+</span>
+                    <span class="stat-label">Industries</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">// About Me</span>
+                <h2 class="section-title reveal">Building Insights<br><span class="accent">From Data</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        Data Consultant with a strong foundation in analytics, business intelligence, and machine learning.
+                        Proven ability to leverage data to solve complex business problems, generate actionable insights,
+                        and optimise strategic outcomes.
+                    </p>
+                    <p>
+                        Experienced across <strong>energy, telecommunications, and education</strong> sectors, with strengths
+                        in stakeholder engagement, dashboarding, and data storytelling. I bridge the gap between
+                        technical complexity and business clarity.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Data Analytics & BI</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Azure & Cloud</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-users"></i>
+                            <span>Stakeholder Engagement</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-card reveal">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-icon"><i class="fas fa-database"></i></div>
+                            <h3>Data-Driven</h3>
+                            <p>Transforming raw data into strategic business decisions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">// Skills & Expertise</span>
+                <h2 class="section-title reveal">Technical<br><span class="accent">Toolbox</span></h2>
+            </div>
+            <div class="skills-grid">
+                <!-- Programming & ML -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <h3>Programming & ML</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">Supervised Learning</span>
+                        <span class="skill-tag">Unsupervised Learning</span>
+                        <span class="skill-tag">Model Evaluation</span>
+                        <span class="skill-tag">Feature Engineering</span>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-width="90"></div>
+                    </div>
+                </div>
+
+                <!-- Data & Analytics -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+                        <h3>Data & Analytics</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Modelling</span>
+                        <span class="skill-tag">Statistical Analysis</span>
+                        <span class="skill-tag">A/B Testing</span>
+                        <span class="skill-tag">Time-Series Forecasting</span>
+                        <span class="skill-tag">Customer Segmentation</span>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-width="95"></div>
+                    </div>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Tools & Platforms</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Azure Synapse</span>
+                        <span class="skill-tag">Azure OpenAI</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Excel</span>
+                        <span class="skill-tag">Power Automate</span>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-width="88"></div>
+                    </div>
+                </div>
+
+                <!-- Consulting & Business -->
+                <div class="skill-category reveal">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-handshake"></i></div>
+                        <h3>Consulting & Business</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Stakeholder Engagement</span>
+                        <span class="skill-tag">Data Storytelling</span>
+                        <span class="skill-tag">Requirements Gathering</span>
+                        <span class="skill-tag">Process Improvement</span>
+                        <span class="skill-tag">Product Management</span>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-width="85"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">// Experience</span>
+                <h2 class="section-title reveal">Where I've<br><span class="accent">Worked</span></h2>
+            </div>
+            <div class="timeline">
+                <!-- Global 4 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-company">Global 4</h3>
+                                <span class="timeline-role">Business Data Analyst</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">Aug 2024 – Present</span>
+                                <span class="timeline-type">Full-time</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Support clients in delivering call center reporting and analytics using 8x8 and Microsoft Teams Queue APIs, providing visibility into queue performance, agent productivity, and service levels.</li>
+                            <li>Support business in M&A activities by building data strategy frameworks, enabling more informed due diligence, portfolio optimisation, and value-creation initiatives.</li>
+                            <li>Developed an Azure OpenAI–powered GPT solution to support Sales and Support teams, streamlining account management, surfacing contract-level opportunities, and reducing time spent on information gathering.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Azure OpenAI</span><span>Power BI</span><span>M&A Analytics</span><span>APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Estu Global -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-company">Estu Global Ltd</h3>
+                                <span class="timeline-role">Data Analyst</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">Nov 2023 – Aug 2024</span>
+                                <span class="timeline-type">Full-time</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Designed interactive Power BI dashboards using customer feedback and survey data, influencing executive-level decisions and directly contributing to securing <strong>£150,000</strong> in additional funding.</li>
+                            <li>Created a customer segmentation model that improved service resolution time and led to a <strong>60% increase</strong> in customer satisfaction scores.</li>
+                            <li>Integrated third-party data (ZoomInfo) into go-to-market workflows, enhancing marketing campaign effectiveness and informing business development strategies.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Power BI</span><span>Segmentation</span><span>ZoomInfo</span><span>Dashboards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Amberside -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-company">Amberside Advisors Ltd</h3>
+                                <span class="timeline-role">Data Analyst</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">Jan 2024 – Mar 2024</span>
+                                <span class="timeline-type">Contract</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Developed a Python-based financial modeling API for heat network assets, improving investment valuation efficiency and scalability across infrastructure projects.</li>
+                            <li>Constructed synthetic datasets and scenario simulations to support strategic investment decisions in long-term asset planning meetings.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Python</span><span>Financial Modelling</span><span>APIs</span><span>Simulation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interview Kickstart -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-company">Interview Kickstart</h3>
+                                <span class="timeline-role">Associate Product Manager</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">Nov 2021 – Sep 2022</span>
+                                <span class="timeline-type">Full-time</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Spearheaded integration of disparate data sources into a unified sales and engagement dashboard, improving visibility and cross-team decision making.</li>
+                            <li>Led A/B testing initiatives to optimize user journeys, boosting engagement and enhancing funnel conversion metrics.</li>
+                            <li>Conducted stakeholder interviews and established performance metrics, resulting in a lead conversion rate increase from <strong>4.5% to 25%</strong>.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>A/B Testing</span><span>Product Management</span><span>Dashboards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upgrad -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-company">Upgrad</h3>
+                                <span class="timeline-role">Associate Consultant</span>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-date">Jul 2020 – Nov 2021</span>
+                                <span class="timeline-type">Full-time</span>
+                            </div>
+                        </div>
+                        <ul class="timeline-details">
+                            <li>Collaborated with product and curriculum teams to align technical programme offerings with market needs, increasing enrolment through data-informed product design.</li>
+                            <li>Acted as a bridge between business and product teams, translating complex insights into clear recommendations that informed strategic partnerships and roadmaps.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span>Consulting</span><span>Product Design</span><span>Strategy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">// Education</span>
+                <h2 class="section-title reveal">Academic<br><span class="accent">Background</span></h2>
+            </div>
+            <div class="education-grid">
+                <div class="education-card reveal">
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="edu-content">
+                        <h3>MSc Data Science</h3>
+                        <span class="edu-school">University of Essex, United Kingdom</span>
+                        <span class="edu-date">Oct 2022 – Oct 2023</span>
+                        <div class="edu-grade">
+                            <span class="grade-badge">Distinction</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="education-card reveal">
+                    <div class="edu-icon"><i class="fas fa-university"></i></div>
+                    <div class="edu-content">
+                        <h3>B.E. Computer Engineering</h3>
+                        <span class="edu-school">Thapar University, India</span>
+                        <span class="edu-date">Jul 2016 – Jul 2020</span>
+                        <div class="edu-grade">
+                            <span class="grade-badge">CGPA: 8.04</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section id="leadership" class="section leadership">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">// Leadership</span>
+                <h2 class="section-title reveal">Beyond<br><span class="accent">Work</span></h2>
+            </div>
+            <div class="leadership-grid">
+                <div class="leadership-card reveal">
+                    <div class="leadership-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3>Knowledge Sharing</h3>
+                    <p>Organised monthly sessions for team members to discuss technical subjects and books. Voluntarily guided students for technical interviews through Expertrons Technologies.</p>
+                </div>
+                <div class="leadership-card reveal">
+                    <div class="leadership-icon"><i class="fas fa-users-cog"></i></div>
+                    <h3>Economics Society Executive</h3>
+                    <p>Led a team of 50 students at Thapar University (2017–2019), increasing participation through innovative activities. Transformed the society into a multi-level hierarchy with structured roles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal">// Get In Touch</span>
+                <h2 class="section-title reveal">Let's Work<br><span class="accent">Together</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <p class="contact-text">I'm always open to new opportunities and interesting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
+                    <div class="contact-links">
+                        <a href="mailto:anmolmahajan356@gmail.com" class="contact-link">
+                            <div class="contact-link-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="contact-link-label">Email</span>
+                                <span class="contact-link-value">anmolmahajan356@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+447867107726" class="contact-link">
+                            <div class="contact-link-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <span class="contact-link-label">Phone</span>
+                                <span class="contact-link-value">+44 7867 107726</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mahajan-anmol/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            <div class="contact-link-icon"><i class="fab fa-linkedin"></i></div>
+                            <div>
+                                <span class="contact-link-label">LinkedIn</span>
+                                <span class="contact-link-value">mahajan-anmol</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <span class="footer-logo">AM<span class="accent">.</span></span>
+                <p>&copy; 2026 Anmol Mahajan. Crafted with precision.</p>
+                <div class="footer-socials">
+                    <a href="mailto:anmolmahajan356@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/mahajan-anmol/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
