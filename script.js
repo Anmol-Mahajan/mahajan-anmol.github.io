@@ -144,11 +144,11 @@ navLinksContainer.querySelectorAll('.nav-link').forEach(link => {
 
 // ===== Typing Effect =====
 const roles = [
-    'Data Consultant',
-    'Business Intelligence Specialist',
-    'Machine Learning Enthusiast',
-    'Azure & Cloud Practitioner',
-    'Data Storyteller'
+    'Analytics Consultant',
+    'Business Intelligence Analyst',
+    'Data Strategy Partner',
+    'Power BI & Azure Analytics Specialist',
+    'Insight Storyteller'
 ];
 
 const typingText = document.getElementById('typingText');
@@ -274,3 +274,74 @@ document.querySelectorAll('.skill-category, .education-card, .leadership-card').
         card.style.transform = '';
     });
 });
+
+// ===== Resume Data Binding =====
+async function applyResumeData() {
+    try {
+        const response = await fetch('resume-data.json', { cache: 'no-store' });
+        if (!response.ok) {
+            return;
+        }
+
+        const resume = await response.json();
+
+        const resumeUpdated = document.getElementById('resumeUpdated');
+        if (resumeUpdated && resume.meta && resume.meta.resumeUpdated) {
+            resumeUpdated.textContent = `Resume updated: ${resume.meta.resumeUpdated}`;
+        }
+
+        const analyticsOutlook = document.getElementById('analyticsOutlook');
+        if (analyticsOutlook && resume.about && resume.about.analyticsOutlook) {
+            analyticsOutlook.textContent = resume.about.analyticsOutlook;
+        }
+
+        const contactIntro = document.getElementById('contactIntro');
+        if (contactIntro && resume.contact && resume.contact.intro) {
+            contactIntro.textContent = resume.contact.intro;
+        }
+
+        if (resume.contact) {
+            const email = resume.contact.email || '';
+            const phone = resume.contact.phone || '';
+            const linkedin = resume.contact.linkedin || '';
+            const linkedinHandle = resume.contact.linkedinHandle || linkedin;
+
+            const emailLink = document.getElementById('emailLink');
+            const emailValue = document.getElementById('emailValue');
+            const emailCtaButton = document.getElementById('emailCtaButton');
+
+            if (emailLink && email) {
+                emailLink.href = `mailto:${email}`;
+            }
+            if (emailValue && email) {
+                emailValue.textContent = email;
+            }
+            if (emailCtaButton && email) {
+                const subject = encodeURIComponent('Opportunity Discussion');
+                emailCtaButton.href = `mailto:${email}?subject=${subject}`;
+            }
+
+            const phoneLink = document.getElementById('phoneLink');
+            const phoneValue = document.getElementById('phoneValue');
+            if (phoneLink && phone) {
+                phoneLink.href = `tel:${phone}`;
+            }
+            if (phoneValue && phone) {
+                phoneValue.textContent = phone;
+            }
+
+            const linkedinLink = document.getElementById('linkedinLink');
+            const linkedinValue = document.getElementById('linkedinValue');
+            if (linkedinLink && linkedin) {
+                linkedinLink.href = linkedin;
+            }
+            if (linkedinValue && linkedinHandle) {
+                linkedinValue.textContent = linkedinHandle;
+            }
+        }
+    } catch (error) {
+        console.error('Unable to load resume-data.json', error);
+    }
+}
+
+applyResumeData();
