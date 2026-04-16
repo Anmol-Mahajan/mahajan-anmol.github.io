@@ -375,9 +375,9 @@ img { max-width: 100%; display: block; }
 /* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 32px;
+    bottom: 48px;
+    transform: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -413,8 +413,8 @@ img { max-width: 100%; display: block; }
 }
 
 @keyframes float {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(-10px); }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
 /* ===== Sections ===== */
@@ -1191,6 +1191,11 @@ img { max-width: 100%; display: block; }
     .hero {
         padding: 100px 24px 40px;
         text-align: left;
+    }
+
+    .scroll-indicator {
+        right: 16px;
+        bottom: 28px;
     }
 
     .hero-stats {
